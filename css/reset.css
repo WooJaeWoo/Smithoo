@@ -1,0 +1,14 @@
+html,body{width:100%;height:100%}
+html{overflow-y:scroll; font-size:10px; font:inherit;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button{margin:0;padding:0;border:0;}
+body{background-color:#fff;*word-break:break-all;-ms-word-break:break-all;line-height:1}
+header,aside,article,nav,main,section,details,figcaption,figure,footer,hgroup,menu{display:block;}
+img,fieldset,iframe{border:0 none}
+input,select,button{vertical-align:middle;outline:none}
+button:focus{outline:none}
+label,button{cursor:pointer}
+a{text-decoration:none;}
+legend{*width:0}
+table{border-collapse:collapse;border-spacing:0}
+ol,ul{list-style:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
