@@ -1,0 +1,30 @@
+{
+  "name": "smithoo",
+  "description": "private website for smithoo",
+  "main": "app.js",
+  "authors": [
+    "Smithoo"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/WooJaeWoo/Smithoo",
+  "moduleType": [],
+  "private": true,
+  "install": {
+    "path": {
+      "css": "public/css/lib",
+      "js": "public/js/lib"
+    }
+  },
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "mustache.js": "mustache#~2.2.1",
+    "crypto-js": "~3.1.6"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
