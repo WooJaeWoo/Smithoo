@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/css/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<head>
+	<title><%= title %></title>
+	<link rel="stylesheet" href="/css/reset.css">
+	
+	<script src="/js/lib/jquery/jquery.min.js"></script>
+	<script src="/js/lib/crypto-js/crypto-js.js"></script>
+</head>
+<body>
+	<h1><%= title %></h1>
+	<p>Welcome to <%= title %></p>
+
+	<input type="text" name="password" id="password" placeholder="password">
+	<button type="button" id="encryptButton">ENCRYPT</button>
+	
+	<script src="/js/smithoo.js"></script>
+</body>
 </html>
