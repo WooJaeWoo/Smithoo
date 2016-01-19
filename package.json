@@ -17,6 +17,7 @@
     "mongoose": "^4.3.6",
     "morgan": "~1.6.1",
     "nan": "^2.2.0",
+    "passport": "^0.3.2",
     "serve-favicon": "~2.3.0"
   },
   "description": "private website for smithoo",
