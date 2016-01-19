@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+	
+	<meta name="title" content="">
+	<meta name="description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	
+	<%- include('../common/head') %>
+	
+	<script src="/js/lib/crypto-js/crypto-js.js"></script>
+</head>
+<body>
+	<main>
+		<div id="smithoo">
+			<input type="password" id="passwordSmithoo" placeholder="password">
+			<button type="button" class="encryptButton" data-who="Smithoo">Submit</button>
+		</div>
+		<div id="jimin">
+			<input type="password" id="passwordJimin" placeholder="password">
+			<button type="button" class="encryptButton" data-who="Jimin">Submit</button>
+		</div>
+	</main>
+	
+	<%- include('../common/footer') %>
+	
+	<script src="/js/todo.js"></script>
+</body>
+</html>
