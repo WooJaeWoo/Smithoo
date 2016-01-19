@@ -14,7 +14,7 @@ var userSchema = mongoose.Schema({
 		hobby1: String,
 		hobby2: String
 	}
-}, { versionKey: false });
+}, { collection: 'mtest', versionKey: false });
 
 userSchema.methods.tell = function() {
 	console.log("I'm " + this.name +"! Nice to meet you!");
