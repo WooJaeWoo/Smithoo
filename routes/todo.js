@@ -9,10 +9,10 @@ router.get('/login', function(req, res, next) {
 	res.render('todo/todoLogin', { title: todoTitle});
 });
 
-/* GET todo login page. */
+/* POST todo login page. */
 router.post('/login', function(req, res, next) {
-	
-	res.render('todo/todo', { title: todoTitle });
+	console.log(req.body.pw);
+	res.send({"login": "ok"});
 });
 
 /*

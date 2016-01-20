@@ -11,11 +11,23 @@ var LOGIN = {
 	login : function(event) {
 		var who = $(event.target).data("who");
 		var encryptedPW = this.encryptPW(who);
+		this.checkLoginAjax(encryptedPW);
 	},
-	checkLoginAjax : function() {
-		
+	checkLoginAjax : function(pw) {
+		$.ajax({
+			type: "POST",
+			url: "/todo/login",
+			data: { "pw" : pw },
+			dataType: "json",
+			success : function(data) {
+				console.log(data);
+			},
+			error : function(err) {
+				console.log(err);
+			}
+		});
 	},
 	encryptPW : function(who) {
-		return CryptoJS.SHA3($("#password" + who).val(), { outputLength: 256 }).toString();
+		return CryptoJS.SHA3($("#pw" + who).val(), { outputLength: 256 }).toString();
 	}
 }
