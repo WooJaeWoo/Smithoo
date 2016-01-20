@@ -12,7 +12,6 @@
     "ejs": "~2.3.3",
     "express": "~4.13.1",
     "express-session": "^1.13.0",
-    "kerberos": "0.0.17",
     "mongodb": "^2.1.4",
     "mongojs": "^2.3.0",
     "mongoose": "^4.3.6",
