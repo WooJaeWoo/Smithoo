@@ -8,6 +8,7 @@ var morgan = require('morgan');
 var morganDaily = require('file-stream-rotator');
 var Logger = require('./bin/logger.js');
 var logger = new Logger();
+var pm = new (require('./bin/processManager.js'))();
 var mongoose = require('mongoose');
 var expressSession = require('express-session');
 var passport = require('passport');
@@ -52,6 +53,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/todo', todo);
+
+pm.makeKillProcessShell();
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

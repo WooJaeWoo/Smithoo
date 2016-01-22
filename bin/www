@@ -82,6 +82,4 @@ function onListening() {
 		? 'pipe ' + addr
 		: 'port ' + addr.port;
 	debug('Listening on ' + bind);
-	console.log("Node PID is " + process.pid);
-	console.log("Listening on " + bind);
 }
