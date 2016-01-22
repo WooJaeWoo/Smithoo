@@ -19,7 +19,8 @@
     "nan": "^2.2.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "winston": "^2.1.1"
   },
   "description": "private website for smithoo",
   "main": "app.js",
