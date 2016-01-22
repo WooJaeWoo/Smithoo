@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>connection test</title>
+</head>
+<body>
+    <div id="testText"></div>
+    <script>
+        window.addEventListener("load", function() {
+			
+            var div = document.getElementById("testText");
+			var con = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            if (con) {
+				div.appendChild(document.createTextNode(con));
+            } else {
+                div.appendChild(document.createTextNode("NULL"));
+            }
+        });
+    </script>
+</body>
+</html>
