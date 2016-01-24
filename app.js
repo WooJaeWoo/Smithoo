@@ -56,6 +56,14 @@ app.use('/todo', todo);
 
 pm.makeKillProcessShell();
 
+app.get('/status', function(req, res) {
+	res.send(new Buffer(JSON.stringify({
+		pid: process.pid,
+		memory: process.memoryUsage(),
+		uptime: process.uptime()
+	})));
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
 	var err = new Error('Not Found');
