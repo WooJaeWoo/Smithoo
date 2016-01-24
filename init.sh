@@ -1,7 +1,7 @@
 #Node app init script
 case "$1" in
 	start)
-		forever start ./bin/www
+		forever start --minUptime 1000 --spinSleepTime 1000 ./bin/www
 		;;
 	stop)
 		forever stop ./bin/www
