@@ -9,15 +9,15 @@ var LOGIN = {
 		$(".encryptButton").on("click", this.login.bind(this));
 	},
 	login : function(event) {
-		var who = $(event.target).data("who");
-		var encryptedPW = this.encryptPW(who);
-		this.checkLoginAjax(encryptedPW);
+		var name = $(event.target).data("who");
+		var encryptedPW = this.encryptPW(name);
+		this.checkLoginAjax(name, encryptedPW);
 	},
-	checkLoginAjax : function(pw) {
+	checkLoginAjax : function(name, pw) {
 		$.ajax({
 			type: "POST",
 			url: "/todo/login",
-			data: { "pw" : pw },
+			data: { "name": name, "pw" : pw },
 			dataType: "json",
 			success : function(data) {
 				console.log(data);

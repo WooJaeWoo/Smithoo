@@ -9,7 +9,6 @@ var morganDaily = require('file-stream-rotator');
 var Logger = require('./bin/logger.js');
 global.logger = new Logger();
 var pm = new (require('./bin/processManager.js'))();
-var mongoose = require('mongoose');
 var expressSession = require('express-session');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
@@ -26,7 +25,7 @@ app.set('view engine', 'ejs');
 
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 // Console logger
 app.use(morgan('dev'));

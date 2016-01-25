@@ -1,1 +1,1 @@
-sudo kill -9 20382
+sudo kill -9 6628

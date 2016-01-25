@@ -1,7 +1,20 @@
 var express = require('express');
 var router = express.Router();
+var TodoUser = require('./../models/todoUser.js');
 var passport = require('passport');
-var localStrategy = require('passport-local').Strategy;
+var LocalStrategy = require('passport-local').Strategy;
+
+passport.use(new LocalStrategy(
+	function(name, pw, done) {
+		TodoUser.findOne({ name: name }, function(err, user) {
+			if (err) { return done(err); }
+			if (!user) { return done(null, false); }
+			if (!user.verifyPassword(pw)) { return done(null, false); }
+			return done(null, user);
+		});
+	}
+));
+
 var todoTitle = "우리 이거 하자!"
 
 /* GET todo login page. */
@@ -11,8 +24,13 @@ router.get('/login', function(req, res, next) {
 
 /* POST todo login page. */
 router.post('/login', function(req, res, next) {
-	console.log(req.body.pw);
-	res.send({"login": "ok"});
+	passport.authenticate('local', function (err, user, info) {
+		var error = err || info;
+		if (error) return res.json(401, error);
+		if (!user) return res.json(404, {message: "WRONG!"});
+		
+		res.send({"login": "ok"});
+	})(req, res, next);
 });
 
 /*
