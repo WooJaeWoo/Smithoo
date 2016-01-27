@@ -5,7 +5,8 @@
 	"scripts": {
 		"start": "./init.sh start",
 		"stop": "./init.sh stop",
-		"restart": "./init.sh restart"
+		"restart": "./init.sh restart",
+		"test": "node ./bin/www"
 	},
 	"dependencies": {
 		"body-parser": "~1.13.2",
