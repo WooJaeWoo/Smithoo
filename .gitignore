@@ -1,4 +1,3 @@
 node_modules/*
-bower_components/*
+webapp/public/js/lib/*
 *.log
-killProcess.sh
