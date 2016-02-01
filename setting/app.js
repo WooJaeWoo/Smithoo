@@ -3,6 +3,8 @@ var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var path = require('path');
+var expressSession = require('express-session');
+var flash = require('connect-flash');
 		
 var setting = require('./../setting')
 var passport = require('passport');
@@ -21,13 +23,15 @@ module.exports = function(app) {
 	app.use(bodyParser.urlencoded({ extended: true }));
 	app.use(bodyParser.json());
 	app.use(cookieParser());
+	app.use(expressSession(config.session));
 
-	
 	// Middleware setting
 	setting.logger(app);
 	setting.mongoose(mongoose);
 	setting.passport(passport);
-	
+	app.use(passport.initialize());
+	app.use(passport.session());
+	app.use(flash());
 	
 	// Routing
 	require(config.root.ROUTER_ROOT)(app, passport);
