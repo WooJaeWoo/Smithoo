@@ -15,7 +15,7 @@ module.exports = {
 		}
 	},
 	database: {
-		localhost: "mongodb://localhost:27017/todo",
+		localhost: "mongodb://localhost:27017/smithoo",
 		options: {}
 	},
 	error: require('./error.js')
