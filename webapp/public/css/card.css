@@ -8,6 +8,7 @@ main {
     background-color: #33DDAA;
     -webkit-transition: background-color 1.5s;
     transition: background-color 1.5s;
+	overflow: hidden;
 }
 h1,h2,h4 { display: none; }
 h3 {

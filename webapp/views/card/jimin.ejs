@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="CARD">
+    <meta name="author" content="JW.Smith">
+    
+    <title>Card</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/card.css">
+    
+    <script src="/js/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/js/lib/mustache.js/mustache.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>CARD</h1>
+        <h2>Send special message to special one</h2>
+    </header>
+    <nav class="blur">
+        <h3>MESSAGE</h3>
+        <button type="button" id="retryButton">다시 보기</button>
+    </nav>
+    <main>
+        <section class="cardGrid floating">
+            <h4>CONTENTS</h4>
+            <div id="spinBox" class=""><!--spinning box-->
+                <div class="row"></div>
+            </div>
+        </section>
+    </main>
+    <script src="/js/card_yjm.js"></script>
+    <script id="nobrTemplate" type="x-tmpl-mustache">
+        <div id="{{boxId}}" class="{{col}} {{row}} {{margin}} {{from}}" data-from="{{from}}">
+            <p><nobr>{{boxText}}</nobr></p>
+        </div>
+    </script>
+    <script id="spanTemplate" type="x-tmpl-mustache">
+        <div id="{{boxId}}" class="{{col}} {{row}} {{margin}} {{from}}" data-from="{{from}}">
+            <p><span>{{boxText}}</span></p>
+        </div>
+    </script>
+</body>
+</html>
