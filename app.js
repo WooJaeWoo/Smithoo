@@ -14,7 +14,8 @@ setting.app(app);
 
 // Server starts to listen
 var server = http.createServer(app);
-server.listen(config.app.port);
+var port = config.app.port;
+server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
@@ -44,5 +45,4 @@ function onError(error) {
 		throw error;
 	}
 }
-//var test = require('./webapp/test.js');
 

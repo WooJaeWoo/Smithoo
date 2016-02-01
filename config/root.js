@@ -6,6 +6,6 @@ module.exports = {
 	APP_ROOT: app_root,
 	MODEL_ROOT: path.join(app_root, 'webapp/models'),
 	VIEW_ROOT: path.join(app_root, 'webapp/views'),
-	ROUTER_ROOT: path.join(app_root, 'webapp/routes'),
+	ROUTER_ROOT: path.join(app_root, 'webapp/routes/router'),
 	PUBLIC_ROOT: path.join(app_root, 'webapp/public')
 };
