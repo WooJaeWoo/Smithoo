@@ -11,13 +11,14 @@ var LOGIN = {
 	login : function(event) {
 		var name = $(event.target).data("who");
 		var encryptedPW = this.encryptPW(name);
+		console.log(encryptedPW);
 		this.checkLoginAjax(name, encryptedPW);
 	},
 	checkLoginAjax : function(name, pw) {
 		$.ajax({
 			type: "POST",
 			url: "/todo/login",
-			data: { "name": name, "pw" : pw },
+			data: { "name": name, "password" : pw },
 			dataType: "json",
 			success : function(data) {
 				console.log(data);

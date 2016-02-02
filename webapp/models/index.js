@@ -1,5 +1,5 @@
 module.exports = {
 
-	user: require('./user');
+	user: require('./todoUser')
 
 }
