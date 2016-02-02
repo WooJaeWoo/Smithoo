@@ -10,7 +10,7 @@ router.get("/login", function(req, res, next) {
 	res.render(config.root.VIEW_ROOT + "/todo/todoLogin");
 });
 
-router.post("/login", passport.authenticate('local', { failureRedirect: '/todo/todoError' }) , function(req, res, next) {
+router.post("/login", passport.authenticate('todo', { failureRedirect: '/todo/todoError' }) , function(req, res, next) {
 	res.redirect('/todo');
 });
 

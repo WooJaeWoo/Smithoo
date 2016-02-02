@@ -3,9 +3,9 @@ var User = require(config.root.MODEL_ROOT).user;
 
 module.exports = function(passport) {
 	
-	passport.use( new LocalStrategy ({
-			usernameField: 'name',
-			passwordField: 'password',
+	passport.use("todo", new LocalStrategy ({
+			usernameField: "name",
+			passwordField: "password",
 			session: true
 		},
 		function (username, password, done) {
