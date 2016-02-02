@@ -14,7 +14,10 @@ setting.app(app);
 
 // Server starts to listen
 var server = http.createServer(app);
-var port = config.app.port;
+var port = config.app.testPort;
+if (config.app.env == "production") {
+	port = config.app.port;
+}
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);

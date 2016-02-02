@@ -3,8 +3,9 @@ var path = require('path');
 module.exports = {
 	root: require('./root.js'),
 	app: {
+		env: "development",
 		port: 3000,
-		evn: "production"
+		testPort: 3001
 	},
 	session: {
 		secret: "smithoo",
@@ -15,7 +16,8 @@ module.exports = {
 		}
 	},
 	database: {
-		localhost: "mongodb://localhost:27017/smithoo",
+		url: "mongodb://localhost:27017/smithoo",
+		testUrl: "mongodb://localhost:27017/smithooTest",
 		options: {}
 	},
 	error: require('./error.js')
