@@ -19,7 +19,7 @@ var UTIL = {
 	isMobile : function() {
 		
 	}
-}
+};
 
 var LOGIN = {
 	init : function() {
@@ -45,7 +45,7 @@ var LOGIN = {
 			}
 		});
 	}
-}
+};
 
 var SIGNUP = {
 	init : function() {
@@ -54,4 +54,4 @@ var SIGNUP = {
 	signup : function(event) {
 		
 	}
-}
+};
