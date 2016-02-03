@@ -6,8 +6,17 @@ router.get("/", isLoggedIn, function(req, res, next) {
 	res.render(config.root.VIEW_ROOT + "/todo/todo");
 });
 
+router.get("/signup", function(req, res, next) {
+	res.render(config.root.VIEW_ROOT + "/todo/signup");
+});
+
+router.post("/signup", function(req, res, next) {
+
+	//res.render(config.root.VIEW_ROOT + "/todo/signup");
+});
+
 router.get("/login", function(req, res, next) {
-	res.render(config.root.VIEW_ROOT + "/todo/todoLogin");
+	res.render(config.root.VIEW_ROOT + "/todo/login");
 });
 
 router.post("/login", passport.authenticate('todo', { failureRedirect: '/todo/todoError' }) , function(req, res, next) {
