@@ -18,6 +18,7 @@
     "express": "~4.13.1",
     "express-session": "^1.13.0",
     "file-stream-rotator": "0.0.6",
+    "formidable": "^1.0.17",
     "mocha": "^2.4.5",
     "mongodb": "^2.1.4",
     "mongojs": "^2.3.0",
