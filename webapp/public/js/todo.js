@@ -1,23 +1,41 @@
 $(document).on("ready", function() {
-	LOGIN.init();
+	console.log("Welcome to Smithoo's blog!");
+	var page = UTIL.getCurrentPage();
+	if (page === "loginPage") {
+		console.log("Login Page");
+		LOGIN.init();
+	} else if (page === "signupPage") {
+		console.log("Sign up Page");
+	}
 });
 
+var UTIL = {
+	getCurrentPage : function() {
+		return $("main").attr("id");
+	},
+	encryptSHA3 : function(word) {
+		return CryptoJS.SHA3(word, { outputLength: 256 }).toString();
+	},
+	isMobile : function() {
+		
+	}
+};
 
 var LOGIN = {
 	init : function() {
-		console.log("Welcome to Smithoo's blog!");
 		$(".encryptButton").on("click", this.login.bind(this));
 	},
 	login : function(event) {
 		var name = $(event.target).data("who");
-		var encryptedPW = this.encryptPW(name);
-		this.checkLoginAjax(name, encryptedPW);
+		var encryptedPW = UTIL.encryptSHA3($("#pw" + name).val());
+		console.log(encryptedPW);
+		//this.checkLoginAjax(name, encryptedPW);
 	},
 	checkLoginAjax : function(name, pw) {
 		$.ajax({
 			type: "POST",
 			url: "/todo/login",
-			data: { "name": name, "pw" : pw },
+			data: { "name": name, "password" : pw },
 			dataType: "json",
 			success : function(data) {
 				console.log(data);
@@ -26,8 +44,14 @@ var LOGIN = {
 				console.log(err);
 			}
 		});
-	},
-	encryptPW : function(who) {
-		return CryptoJS.SHA3($("#pw" + who).val(), { outputLength: 256 }).toString();
 	}
-}
+};
+
+var SIGNUP = {
+	init : function() {
+		$(".encryptButton").on("click", this.signup.bind(this));
+	},
+	signup : function(event) {
+		
+	}
+};
