@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SSSPIN</title>
+	<title>Ssspin</title>
 	
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="msapplication-tap-highlight" content="no">
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
 	<meta name="title" content="SSSPIN">
-	<meta name="author" content="smithoo">
 	<meta name="description" content="SSSSSSSSSSSSSSPIN!!!">
-	<meta property="og:url" content="">
-	<meta property="og:type" content="article">
+	<meta property="og:url" content="http://smithoo.com/ssspin">
 	<meta property="og:title" content="SSSPIN">
 	<meta property="og:description" content="SSSSSSSSSSSSSSPIN!!!">
 	<meta property="og:image" content="/img/ssspin.jpg">
 	<meta property="og:image:width" content="720">
 	<meta property="og:image:height" content="480">
 
-	<link rel="stylesheet" type="text/css" href="/css/reset.css">
-	<link rel="stylesheet" type="text/css" href="/css/ssspin.css">
-	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700,300' rel='stylesheet' type='text/css'>
+	<%- include('./common/head') %>
 	
-	<script src="js/lib/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/ssspin.css">
 </head>
 <body>
 	<main>
-	
+		<h1>Ssspin!!!</h1>
+		<h2>Inspired by <a href="https://www.youtube.com/watch?v=aDxfyTfPo48" target="_blank">Kinetic Sculpture (by Clayton Boyer)</a></h2>
+		<div class="ssspin" id="ssspin1">
+			<%- include('./partial/ssspin') %>
+		</div>
+		<div class="ssspin" id="ssspin2">
+			<%- include('./partial/ssspin') %>
+		</div>
+		<nav>
+			<div class="controller">
+				<p>Ssspin 1</p>
+				<input type="range" class="velocity" id="velocity1" min="-10" max="10" step="1" value="0">
+			</div>
+			<div class="controller">
+				<p>Ssspin 2</p>
+				<input type="range" class="velocity" id="velocity2" min="-10" max="10" step="1" value="0">
+			</div>
+		</nav>	
 	</main>
-	<nav>
-		<input type="range" min="-10" max="10" step="1">
-	</nav>
-	<script src="js/ssspin.js"></script>
+	<%- include('./common/footer') %>
+	<script src="/js/ssspin.js"></script>
 </body>
 </html>
 
