@@ -13,7 +13,11 @@ var mongoose = require('mongoose');
 module.exports = function(app) {
 	
 	// app.set
-	app.set('port', config.app.port);
+	var port = config.app.testPort;
+	if (config.app.env == "production") {
+		port = config.app.port;
+	}
+	app.set('port', port);
 	app.set('views', config.root.VIEW_ROOT);
 	app.set('view engine', 'ejs');
 	

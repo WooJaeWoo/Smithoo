@@ -5,4 +5,8 @@ router.get("/", function(req, res, next) {
 	res.render(config.root.VIEW_ROOT);
 });
 
+router.get("/ssspin", function(req, res, next) {
+	res.render("ssspin");
+});
+
 module.exports = router;

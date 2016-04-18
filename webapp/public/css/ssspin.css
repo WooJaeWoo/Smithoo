@@ -1,0 +1,124 @@
+html, body, main {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+main {
+	position: relative;
+	overflow: hidden;
+	background-color: #e9ba00;
+	text-align: center;
+}
+
+h1 {
+	font-size: 30px;
+	margin-top: 120px;
+	margin-bottom: 10px;
+}
+
+h2 {
+	font-size: 15px;
+}
+
+h2 a {
+	color: blue;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@-moz-keyframes cspin { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes cspin { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes cspin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+.ssspin {
+	position: absolute;
+	top: -10%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 240px;
+	height: 240px;
+	
+	-webkit-animation-timing-function: linear;
+	-moz-animation-timing-function: linear;
+	animation-timing-function: linear;
+	
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	
+	-webkit-animation-duration: 0s;
+	-moz-animation-duration: 0s;
+	animation-duration: 0s;
+}
+
+.ssspin.spin {
+	-webkit-animation-name: spin;
+	-moz-animation-name: spin;
+	animation-name: spin;
+}
+.ssspin.cspin {
+	-webkit-animation-name: cspin;
+	-moz-animation-name: cspin;
+	animation-name: cspin;
+}
+
+nav {
+	position: absolute;
+	top: 65%;
+	width: 100%;
+	height: 100px;
+}
+
+.controller {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.controller p {
+	font-size: 20px;
+	font-weight: 800;
+	padding-bottom: 10px;
+}
+
+.velocity {
+	min-width: 240px;
+}
+
+footer {
+	position: absolute;
+	left: 8px;
+	bottom: 5px;
+	font-size: 10px;
+	color: #555;
+}
+
+@media all and (max-width : 601px) {
+	h1 {
+		font-size: 24px;
+		margin-top: 10%;
+		margin-bottom: 10px;
+	}
+
+	h2 {
+		font-size: 12px;
+	}
+	
+	.ssspin {
+		position: absolute;
+		top: -10%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		width: 240px;
+		height: 240px;
+	}
+}
+
