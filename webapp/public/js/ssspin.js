@@ -1,8 +1,9 @@
-var raf = window.requestAnimationFrame || 
-	window.webkitRequestAnimationFrame ||
-	window.mozRequestAnimationFrame ||
-	window.msRequestAnimationFrame ||
-	window.oRequestAnimationFrame;
+var raf = window.requestAnimationFrame
+	|| window.webkitRequestAnimationFrame
+	|| window.mozRequestAnimationFrame
+	|| window.msRequestAnimationFrame
+	|| window.oRequestAnimationFrame
+	|| function(f) { return setTimeout(f, 1000/60) }; // roughly 60 frames per second;
 
 function getTime() {
 	return (new Date()).getTime();
