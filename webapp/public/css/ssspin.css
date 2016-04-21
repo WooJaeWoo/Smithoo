@@ -59,6 +59,12 @@ h2 a {
 	animation-duration: 0s;
 }
 
+#ssspin2 svg {
+	-webkit-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+
 .ssspin.spin {
 	-webkit-animation-name: spin;
 	-moz-animation-name: spin;
