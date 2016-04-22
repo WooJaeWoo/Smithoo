@@ -8,6 +8,8 @@ module.exports = function(app, passport) {
 	
 	app.use("/", require("./index"));
 	
+	app.use("/ui", require("./ui"));
+	
 	app.use("/todo", require("./todo"));
 	
 	app.use("/card", require("./card"));
