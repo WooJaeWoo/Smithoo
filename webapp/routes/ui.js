@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var uiList = ["ssspin"];
+var uiList = ["ssspin", "rrrain"];
 
 router.get("/:uiname", function(req, res, next) {
 	var uiname = req.params.uiname;
