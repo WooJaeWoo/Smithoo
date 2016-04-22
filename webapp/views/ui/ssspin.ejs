@@ -5,14 +5,14 @@
 	
 	<meta name="title" content="SSSPIN">
 	<meta name="description" content="SSSSSSSSSSSSSSPIN!!!">
-	<meta property="og:url" content="http://smithoo.com/ssspin">
+	<meta property="og:url" content="http://smithoo.com/ui/ssspin">
 	<meta property="og:title" content="SSSPIN">
 	<meta property="og:description" content="SSSSSSSSSSSSSSPIN!!!">
 	<meta property="og:image" content="/img/ssspin.jpg">
 	<meta property="og:image:width" content="720">
 	<meta property="og:image:height" content="480">
 
-	<%- include('./common/head') %>
+	<%- include(config.root.VIEW_ROOT + '/common/head') %>
 	
 	<link rel="stylesheet" type="text/css" href="/css/ssspin.css">
 </head>
@@ -21,10 +21,10 @@
 		<h1>Ssspin!!!</h1>
 		<h2>Inspired by <a href="https://www.youtube.com/watch?v=aDxfyTfPo48" target="_blank">Kinetic Sculpture (by Clayton Boyer)</a></h2>
 		<div class="ssspin" id="ssspin1">
-			<%- include('./partial/ssspin') %>
+			<%- include(config.root.VIEW_ROOT + '/partial/ssspin') %>
 		</div>
 		<div class="ssspin" id="ssspin2">
-			<%- include('./partial/ssspin') %>
+			<%- include(config.root.VIEW_ROOT + '/partial/ssspin') %>
 		</div>
 		<nav>
 			<div class="controller">
@@ -37,7 +37,7 @@
 			</div>
 		</nav>	
 	</main>
-	<%- include('./common/footer') %>
+	<%- include(config.root.VIEW_ROOT + '/common/footer') %>
 	<script src="/js/ssspin.js"></script>
 </body>
 </html>
