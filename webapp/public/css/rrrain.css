@@ -1,0 +1,118 @@
+html, body, main {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+main {
+	position: relative;
+	overflow: hidden;
+	background-color: #0a0a0a;
+	text-align: center;
+}
+
+h1 {
+	position: absolute;
+	top: 40px;
+	left: 30px;
+	font-size: 30px;
+	color: #ddd;
+}
+
+h2 {
+	position: absolute;
+	top: 80px;
+	left: 30px;
+	font-size: 15px;
+	color: #bbb;
+}
+
+.drop {
+	position: absolute;
+	top: -100px;
+	width:1px;
+	height:90px;
+	background: #fff;
+	background: -webkit-linear-gradient(rgba(255, 255, 255, .2), #fff);
+	background: -o-linear-gradient(rgba(255, 255, 255, .2), #fff);
+	background: -moz-linear-gradient(rgba(255, 255, 255, .2), #fff);
+	background: linear-gradient(rgba(255, 255, 255, .2), #fff);
+	
+	-webkit-animation: fall 3s linear infinite;
+	animation: fall 3s linear infinite;
+	
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.spot {
+	position: absolute;
+	width: 39px;
+	height: 39px;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.spot1 {
+	background-image: url("/img/ui/rrrain/spot1.png");
+}
+.spot2 {
+	background-image: url("/img/ui/rrrain/spot2.png");
+}
+.spot3 {
+	background-image: url("/img/ui/rrrain/spot3.png");
+}
+.spot4 {
+	background-image: url("/img/ui/rrrain/spot4.png");
+}
+.spot5 {
+	background-image: url("/img/ui/rrrain/spot5.png");
+}
+
+@-webkit-keyframes fall {
+	to {
+		-webkit-transform: translateY(2000px);
+		transform:translateY(2000px);
+	}
+}
+@keyframes fall {
+	to {
+		-webkit-transform:translateY(2000px);
+		transform:translateY(2000px);
+	}
+}
+
+footer {
+	position: absolute;
+	left: 8px;
+	bottom: 5px;
+	font-size: 10px;
+	color: #bbb;
+}
+
+footer a {
+	color: #999;
+}
+
+@media all and (max-width : 601px) {
+	h1 {
+		font-size: 24px;
+	}
+
+	h2 {
+		font-size: 12px;
+	}
+	.drop {
+		height:60px;
+	}
+	
+	.spot {
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}
