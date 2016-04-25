@@ -1,0 +1,13 @@
+{
+	"passfail"		: false,
+	"maxerr"		: 100,
+
+	"jquery"		: true,
+	"browser"		: true,
+
+	"strict"		: false,
+	"globalstrict"	: false,
+
+	"undef" 		: true,
+	"unused"		: true
+}
