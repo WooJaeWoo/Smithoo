@@ -43,8 +43,8 @@ gulp.task("css", function() {
 	return gulp.src(paths.css)
 		.pipe(concatCss("smithoo.css"))
 		.pipe(cleanCSS({debug: true}, function(details) {
-			console.log(details.name + "(origin): " + details.stats.originalSize + " Kb");
-			console.log(details.name + "(min): " + details.stats.minifiedSize + " Kb");
+			console.log(details.name + "(origin): " + details.stats.originalSize + " byte");
+			console.log(details.name + "(min): " + details.stats.minifiedSize + " byte");
 		}))
 		.pipe(autoprefixer())
 		.pipe(gulp.dest(paths.dist + "/css"));
