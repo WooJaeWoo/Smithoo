@@ -32,48 +32,23 @@ gulp.task("default", function() {
 
 gulp.task("js", function() {
 	return gulp.src(paths.js)
-		.pipe(concat("all.js"))
-		//.pipe(jshint())
-		//.pipe(jshint.reporter(stylish))
+		.pipe(concat("smithoo.js"))
+		.pipe(jshint())
+		.pipe(jshint.reporter(stylish))
 		.pipe(uglify())
 		.pipe(gulp.dest(paths.dist + "/js"));
-        //.pipe(livereload());
 });
 
 gulp.task("css", function() {
-	return streamqueue({ objectMode: true },
-			gulp.src(src + "/css/reset.css"),
-			gulp.src(["!" + src + "/css/reset.css", paths.css])
-		)
-		.pipe(concatCss("all.css"))
+	return gulp.src(paths.css)
+		.pipe(concatCss("smithoo.css"))
 		.pipe(cleanCSS({debug: true}, function(details) {
 			console.log(details.name + "(origin): " + details.stats.originalSize + " Kb");
 			console.log(details.name + "(min): " + details.stats.minifiedSize + " Kb");
 		}))
 		.pipe(autoprefixer())
 		.pipe(gulp.dest(paths.dist + "/css"));
-        //.pipe(livereload());
 });
-
-/*
-gulp.task("img", function () {
-    return gulp.src(paths.img)
-        .pipe(imagemin({
-            optimizationLevel: 3,
-            progressive: true,
-            interlaced: true
-        }))
-        .pipe(gulp.dest(paths.dist + "/img"))
-        .pipe(livereload());
-});
-*/
-
-/*
-gulp.task("test", function () {
-    return gulp.src( test js path )
-        .pipe(mocha({reporter: 'nyan'}));
-});
-*/
 
 gulp.task('watch', function () {
 	livereload.listen();
@@ -82,6 +57,6 @@ gulp.task('watch', function () {
     //gulp.watch(paths.img, ["img"]);
 });
 
-gulp.task("build", ["js", "css"/*, "img"*/]);
+gulp.task("build", ["css", "js" /*, "img"*/]);
 
 

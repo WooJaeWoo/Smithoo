@@ -19,6 +19,7 @@
     "express-session": "^1.13.0",
     "file-stream-rotator": "0.0.6",
     "formidable": "^1.0.17",
+    "handlebars": "^4.0.5",
     "jquery": "^2.2.3",
     "mocha": "^2.4.5",
     "mongodb": "^2.1.4",
