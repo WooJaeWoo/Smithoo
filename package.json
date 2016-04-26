@@ -19,6 +19,7 @@
     "express-session": "^1.13.0",
     "file-stream-rotator": "0.0.6",
     "formidable": "^1.0.17",
+    "jquery": "^2.2.3",
     "mocha": "^2.4.5",
     "mongodb": "^2.1.4",
     "mongojs": "^2.3.0",
@@ -34,6 +35,8 @@
   "description": "Website of Smithoo",
   "main": "app.js",
   "devDependencies": {
+    "browserify": "^13.0.0",
+    "browserify-shim": "^3.8.12",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-clean-css": "^2.0.6",
