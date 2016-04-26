@@ -1,5 +1,6 @@
 {
 	"passfail"		: false,
+    "devel"         : true,
 	"maxerr"		: 100,
 
 	"jquery"		: true,
