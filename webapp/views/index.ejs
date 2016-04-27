@@ -23,8 +23,11 @@
 				<img src="/dist/img/smithoo.jpg" alt="">
 			</div>
 		</div>
+		<div class="workshopTitle">
+			UI Workshop
+		</div>
 		<ul class="uiList">
-			<li>
+			<li data-ui="ssspin">
 				<div class="flipper">
 					<div class="front">
 						Ssspin
@@ -34,7 +37,7 @@
 					</div>
 				</div>
 			</li>
-			<li>
+			<li data-ui="rrrain">
 				<div class="flipper">
 					<div class="front">
 						Rrrain
@@ -44,7 +47,7 @@
 					</div>
 				</div>
 			</li>
-			<li>
+			<li data-ui="cccard">
 				<div class="flipper">
 					<div class="front">
 						Cccard
@@ -54,7 +57,7 @@
 					</div>
 				</div>
 			</li>
-			<li>
+			<li data-ui="ssscroll">
 				<div class="flipper">
 					<div class="front">
 						Ssscroll
@@ -64,13 +67,23 @@
 					</div>
 				</div>
 			</li>
-			<li>
+			<li data-ui="sepscroll">
 				<div class="flipper">
 					<div class="front">
 						SepScroll
 					</div>
 					<div class="back">
 						SepScroll
+					</div>
+				</div>
+			</li>
+			<li data-ui="ssspotlight">
+				<div class="flipper">
+					<div class="front">
+						Ssspotlight
+					</div>
+					<div class="back">
+						Ssspotlight
 					</div>
 				</div>
 			</li>
@@ -82,6 +95,8 @@
 		</div>
 	</main>
 	<div class="noise"></div>
+	<%- include('./common/footer') %>
+	<script src="/lib/js/handlebars.min.js"></script>
 	<script src="/dist/js/smithoo.js"></script>
 </body>
 </html>

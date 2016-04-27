@@ -50,7 +50,16 @@ aside {
     height: 100px;
     overflow: hidden;
 }
-
+.workshopTitle {
+	height: 40px;
+	padding: 0 20px;
+	line-height: 40px;
+	background-color: #222;
+	color: #fff;
+	font-weight: 600;
+	font-size: 20px;
+	box-sizing: border-box;
+}
 .uiList {
 	position: relative;
     perspective: 1000;    
@@ -90,12 +99,18 @@ aside {
 }
 .back {
 	transform: rotateX(180deg);
-    background-color: #333;
+    background-color: #222;
     color: #fff;
 }
 
 .noise {
     
+}
+
+footer {
+	position: absolute;
+	bottom: 2px;
+	font-size: 9px;
 }
 @media all and (max-width : 933px) {
 }
