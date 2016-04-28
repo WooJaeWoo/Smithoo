@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 html, body, main {
     position: relative;
 	width: 100%;
@@ -5,12 +7,15 @@ html, body, main {
 	overflow: hidden;
 }
 
+body {
+	font-family: 'Ubuntu', 'Noto Sans KR', sans-serif;
+}
+
 main {
 	position: relative;
 	background-color: #fff;
     color: #333;
-	text-align: center;
-	font-family: 'Ubuntu', sans-serif;
+	text-align: center;	
 }
 .hide { display: none; }
 .m-show {
@@ -18,7 +23,7 @@ main {
 }
 
 
-.wrap {
+.hello {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -27,39 +32,55 @@ main {
 	height: 120px;
 }
 
-.wrap > * {
+.hello h2 {
 	color: #555;
 	line-height: 45px;
 }
-
+nav {
+	width: 100%;
+	height: 60px;
+	background-color: rgba(50, 50, 50, 0.5);
+}
+.workshopTitle {
+	width: 240px;
+	height: 60px;
+	float: left;
+	background-color: #222;
+	color: #fff;
+	box-sizing: border-box;
+}
+.picture {
+	position: relative;
+	top: 10px;
+	left: 15px;
+	float: left;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	text-align: center;
+}
+.workshopTitle p {
+	float: left;
+	padding-left: 32px;
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 60px;
+}
+nav h1 {
+	float: left;
+	line-height: 60px;
+	padding-left: 18px;
+	color: #fff;
+}
 aside {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 60px;
+    left: 0px;
     z-index: 999;
     width: 240px;
 }
-.profile {
-    text-align: center;
-    padding: 30px 0;
-}
-.picture {
-    margin: 0 auto;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-}
-.workshopTitle {
-	height: 40px;
-	padding: 0 20px;
-	line-height: 40px;
-	background-color: #222;
-	color: #fff;
-	font-weight: 600;
-	font-size: 20px;
-	box-sizing: border-box;
-}
+
 .uiList {
 	position: relative;
     perspective: 1000;    
@@ -104,7 +125,14 @@ aside {
 }
 
 .noise {
-    
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(/dist/img/noise.png);
+	z-index: 1000;
 }
 
 footer {

@@ -35,7 +35,7 @@ gulp.task("js", function() {
 		.pipe(concat("smithoo.js"))
 		.pipe(jshint())
 		.pipe(jshint.reporter(stylish))
-		.pipe(uglify())
+		//.pipe(uglify())
 		.pipe(gulp.dest(paths.dist + "/js"));
 });
 

@@ -13,6 +13,9 @@ var Aside = {
         flipper.removeClass("hover");
     },
 	changePage: function(event) {
-		console.log($(event.currentTarget).data("ui"));
+		var ui = $(event.currentTarget).data("ui");
+		if ($("main").data("show") !== ui) {
+			UIManager.changeUI(ui);
+		}
 	}
 };
