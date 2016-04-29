@@ -246,16 +246,17 @@
 		<div id="spotlight2" class="spotlight">●</div>
 	</script>
 	<script id="CccardTemplate" type="text/x-handlebars-template">
-		<nav class="blur">
-			<h3>MESSAGE</h3>
-			<button type="button" id="retryButton">다시 보기</button>
-		</nav>
-		<section class="cardGrid floating">
-            <h4>CONTENTS</h4>
-            <div id="spinBox" class=""><!--spinning box-->
-                <div class="row"></div>
-            </div>
-        </section>
+		<div class="cccard">
+			<div class="cardNav blur">
+				<h3>MESSAGE</h3>
+				<button type="button" id="retryButton">다시 보기</button>
+			</div>
+			<section class="cardGrid floating">
+				<div id="spinBox" class=""><!--spinning box-->
+					<div class="row"></div>
+				</div>
+			</section>
+		</div>
 	</script>
 	<script id="nobrTemplate" type="text/x-handlebars-template">
         <div id="{{boxId}}" class="{{col}} {{row}} {{margin}} {{from}}" data-from="{{from}}">
