@@ -5,7 +5,8 @@
 
 	"jquery"		: true,
 	"browser"		: true,
-	"predef"       : ["Handlebars"],
+	"predef"		: ["Handlebars"],
+	"expr"			: true,
 
 	"strict"		: false,
 	"globalstrict"	: false,
