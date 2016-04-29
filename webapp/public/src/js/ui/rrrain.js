@@ -53,7 +53,7 @@ WaterSpot.prototype = {
 	init: function() {
 		this.top = randRange(30, displayHeight - 30);
 		this.left = randRange(30, displayWidth - 30);
-		this.angle = randRange(0, 360)
+		this.angle = randRange(0, 360);
 		this.duration = randRange(2500, 3500);
 		this.imgNum = randRange(1, 5);
 		this.element = this.makeSpot();
