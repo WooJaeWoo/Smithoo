@@ -1,0 +1,17 @@
+{
+	"passfail"		: true,
+    "devel"         : true,
+	"maxerr"		: 100,
+
+	"jquery"		: true,
+	"browser"		: true,
+	"predef"		: ["Handlebars"],
+	"expr"			: true,
+
+	"strict"		: false,
+	"globalstrict"	: false,
+
+	"undef" 		: true,
+	"unused"		: true
+	
+}

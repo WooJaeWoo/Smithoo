@@ -1,4 +1,5 @@
 node_modules/*
-webapp/public/js/lib/*
-webapp/public/js/card_yjm.js
+webapp/public/lib/*
+webapp/public/dist/*
 *.log
+

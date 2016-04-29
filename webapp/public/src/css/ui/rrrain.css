@@ -1,0 +1,63 @@
+.rrrain {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	background-color: #0a0a0a;
+	text-align: center;
+}
+
+@keyframes fall {
+	to {
+		transform:translateY(2000px);
+	}
+}
+
+.rrrain .drop {
+	position: absolute;
+	top: -100px;
+	width:1px;
+	height:90px;
+	background: #fff;
+	background: linear-gradient(rgba(255, 255, 255, .2), #fff);
+	
+	animation: fall 3s linear infinite;
+	
+	transform: translateY(0);
+}
+
+.rrrain .spot {
+	position: absolute;
+	width: 39px;
+	height: 39px;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.rrrain .spot1 {
+	background-image: url("/dist/img/ui/rrrain/spot1.png");
+}
+.rrrain .spot2 {
+	background-image: url("/dist/img/ui/rrrain/spot2.png");
+}
+.rrrain .spot3 {
+	background-image: url("/dist/img/ui/rrrain/spot3.png");
+}
+.rrrain .spot4 {
+	background-image: url("/dist/img/ui/rrrain/spot4.png");
+}
+.rrrain .spot5 {
+	background-image: url("/dist/img/ui/rrrain/spot5.png");
+}
+
+@media all and (max-width : 601px) {
+	.rrrain .drop {
+		height:60px;
+	}
+	
+	.rrrain .spot {
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}

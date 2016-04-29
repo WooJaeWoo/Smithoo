@@ -1,19 +1,26 @@
-var raf = window.requestAnimationFrame
-	|| window.webkitRequestAnimationFrame
-	|| window.mozRequestAnimationFrame
-	|| window.msRequestAnimationFrame
-	|| window.oRequestAnimationFrame
-	|| function(f) { return setTimeout(f, 1000/60) }; // roughly 60 frames per second;
+UI.Ssspin = {};
+UI.Ssspin.init = function() {
+	this.ssspin1 = new Ssspin("ssspin1", "velocity1");
+	this.ssspin2 = new Ssspin("ssspin2", "velocity2");
+};
 
-function getTime() {
-	return (new Date()).getTime();
-}
+UI.Ssspin.destroy = function() {
+	this.ssspin1 = null;
+	this.ssspin2 = null;
+};
+
+var raf = window.requestAnimationFrame ||
+	window.webkitRequestAnimationFrame ||
+	window.mozRequestAnimationFrame ||
+	window.msRequestAnimationFrame ||
+	window.oRequestAnimationFrame ||
+	function(f) { return setTimeout(f, 1000/60); }; // roughly 60 frames per second;
 
 function Ssspin(id, controller) {
 	this.ssspin = $("#" + id);
 	this.controller = $("#" + controller);
 	
-	this.start;
+	this.start = null;
 	this.angle = 0;
 	this.velocity = 0;
 	this.angularVelocity = 0;
@@ -65,9 +72,4 @@ Ssspin.prototype = {
 		
 		raf(tick.bind(this));
 	}
-}
-
-$(document).ready(function() {
-	var ssspin1 = new Ssspin("ssspin1", "velocity1");
-	var ssspin2 = new Ssspin("ssspin2", "velocity2");
-});
+};

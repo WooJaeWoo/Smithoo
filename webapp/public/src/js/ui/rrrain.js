@@ -1,4 +1,12 @@
-'use strict';
+UI.Rrrain = {};
+UI.Rrrain.init = function() {
+	rainDrop();
+	setInterval(waterSpotted, 200);
+};
+
+UI.Rrrain.destroy = function() {
+	
+};
 
 function randRange(minNum, maxNum) {
 	return (Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum);
@@ -29,7 +37,7 @@ Drop.prototype = {
 	appendDrop: function() {
 		$("#sky").append(this.element);
 	}
-}
+};
 
 function WaterSpot() {
 	this.element;
@@ -45,7 +53,7 @@ WaterSpot.prototype = {
 	init: function() {
 		this.top = randRange(30, displayHeight - 30);
 		this.left = randRange(30, displayWidth - 30);
-		this.angle = randRange(0, 360)
+		this.angle = randRange(0, 360);
 		this.duration = randRange(2500, 3500);
 		this.imgNum = randRange(1, 5);
 		this.element = this.makeSpot();
@@ -70,7 +78,7 @@ WaterSpot.prototype = {
 			this.element.fadeOut(1500, this.element.remove);
 		}.bind(this), this.duration);
 	}
-}
+};
 
 
 function rainDrop() {
@@ -82,13 +90,7 @@ function rainDrop() {
 	}
 }
 
-
 function waterSpotted() {
 	var spot = new WaterSpot();
 	spot.appendSpot();
 }
-
-$(document).ready(function() {
-	rainDrop();
-	setInterval(waterSpotted, 200);
-});

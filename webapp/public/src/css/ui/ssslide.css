@@ -1,0 +1,43 @@
+.ssslide {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 100%;
+	height: 500px;
+	background-color: #ddd;
+	overflow: hidden;
+}
+.ssslide section img { max-width: none; }
+.ssslide .control {
+	width: 100%;
+	position: absolute;
+	z-index: 999;
+}
+.ssslide .control button {
+	position: absolute;
+	top: 220px;
+	width: 60px;
+	height: 80px;
+	font-size: 40px;
+	font-weight: 800;
+	color: #777;
+	background-color: #fff;
+	opacity: 0.6;
+}
+.ssslide #goLeft {
+	left: 0px;
+}
+.ssslide #goRight {
+	right: 0px;
+}
+
+.ssslide .sss {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.ssslide #sss1 { z-index: 1; }
+.ssslide #sss2 { z-index: 2; }
+.ssslide #sss3 { z-index: 3; }
+.ssslide #sss4 { z-index: 4; }
