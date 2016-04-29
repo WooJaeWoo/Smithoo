@@ -1,0 +1,48 @@
+.ssspotlight {
+	height: 100%;
+	background-color: #166152;
+}
+.ssspotlight .spotlight {
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: default;
+	
+	background-color: #ffcdb4;
+	
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+}
+.ssspotlight #spotlight1 {
+	font-size: 20em;
+	animation-duration: 16s;
+	animation-name: spotlighting1;
+}
+.ssspotlight #spotlight2 {
+	font-size: 36em;
+	animation-duration: 24s;
+	animation-name: spotlighting2;
+}
+/** Spotlight Animation **/
+@keyframes spotlighting1 {
+	0% { transform: translate(0px, 0px); }
+	16% { transform: translate(1000px, 1000px); }
+	42% { transform: translate(800px, -50px); }
+	55% { transform: translate(1200px, 800px); }
+	72% { transform: translate(-200px, 1000px); }
+	88% { transform: translate(500px, -300px); }
+	100% { transform: translate(1400px, 600px); }
+}
+@keyframes spotlighting2 {
+	0% { transform: translate(0px, 0px); }
+	20% { transform: translate(-500px, 700px); }
+	38% { transform: translate(1000px, -50px); }
+	50% { transform: translate(200px, 800px); }
+	69% { transform: translate(0px, -100px); }
+	82% { transform: translate(500px, 600px); }
+	100% { transform: translate(1200px, 300px); }
+}
