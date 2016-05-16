@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Smithoo's world</title>
+	
+	<meta name="title" content="This is my trip">
+	<meta name="description" content="This is my trip. Trip checker.">
+	<meta property="og:url" content="http://smithoo.com/mytrip">
+	<meta property="og:title" content="This is my trip">
+	<meta property="og:description" content="This is my trip. Trip checker.">
+	<meta property="og:image" content="">
+	<meta property="og:image:width" content="">
+	<meta property="og:image:height" content="">
+	
+	<%- include('./../common/head') %>
+	
+	<link rel="stylesheet" href="/dist/css/smithoo.css">
+</head>
+<body>
+	<div>This is my trip</div>
+	<div id="myMap" style="width:500px;height:400px;"></div>
+	<%- include('./../common/footer') %>
+	<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=fef0774af882e4dfd1ae6ecef5abe771&libraries=services,clusterer"></script>
+	<script>
+		var container = document.getElementById("myMap");
+		var options = {
+			center: new daum.maps.LatLng(33.450701, 126.570667),
+			level: 3
+		};
+
+		var map = new daum.maps.Map(container, options);
+	</script>
+</body>
+</html>

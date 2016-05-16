@@ -14,4 +14,5 @@ module.exports = function(app, passport) {
 	
 	app.use("/card", require("./card"));
 	
+	app.use("/mytrip", require("./mytrip"));
 };
