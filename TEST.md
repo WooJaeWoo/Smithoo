@@ -22,6 +22,10 @@ The document panel is accessible using the <i class="icon-folder-open"></i> butt
 
 #### <i class="icon-folder-open"></i> Switch to another document
 
+<script src="raphael-min.js"></script>
+<script src="underscore-min.js"></script>
+<script src="sequence-diagram-min.js"></script>
+
 All your local documents are listed in the document panel. You can switch from one to another by clicking a document in the list or you can toggle documents using <kbd>Ctrl+[</kbd> and <kbd>Ctrl+]</kbd>.
 
 #### <i class="icon-pencil"></i> Rename a document
